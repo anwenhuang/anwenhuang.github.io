@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anwen Huang</title>
+<meta name="description" content="Anwen Huang is a Computer Science Ph.D. student at UCLA working on multimodal foundation models and LLMs for healthcare.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 0 20px 72px; }
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: 1.3rem; margin: 48px 0 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.95rem; }
+.bio p { margin: 0 0 14px; }
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { margin: 0 0 18px; }
+.title { font-weight: 600; }
+.meta { color: var(--muted); font-size: 0.93rem; }
+.venue { font-style: italic; }
+.me { font-weight: 600; color: var(--text); }
+.date { color: var(--faint); font-size: 0.85rem; }
+.exp { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; margin: 0 0 12px; }
+.exp .date { text-align: right; white-space: nowrap; }
+.artnote { color: var(--muted); margin: 0 0 18px; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 4px; background: var(--rule); }
+.gallery figcaption { font-size: 0.8rem; color: var(--faint); margin-top: 6px; line-height: 1.4; }
+.pub { display: grid; grid-template-columns: 240px 1fr; gap: 18px; align-items: start; }
+.thumb { position: relative; display: block; }
+.thumb img { width: 100%; aspect-ratio: 16/10; object-fit: contain; background: #fff; border: 1px solid var(--rule); border-radius: 4px; display: block; }
+.thumb.video img { object-fit: cover; background: #000; }
+.thumb iframe { width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 4px; display: block; }
+.play { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgba(0,0,0,.6); }
+.play::after { content: ""; position: absolute; left: 17px; top: 13px; border-style: solid; border-width: 9px 0 9px 14px; border-color: transparent transparent transparent #fff; }
+.thumb.video:hover .play { background: var(--link); }
+.credit { color: var(--faint); font-size: 0.75rem; margin-top: 2px; }
+@media (max-width: 560px) { .pub { grid-template-columns: 1fr; } .thumb { max-width: 260px; } }
+footer { margin-top: 56px; color: var(--faint); font-size: 0.85rem; }
+@media (max-width: 560px) {
+  .exp { grid-template-columns: 1fr; } .exp .date { text-align: left; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+:root { --bg:#f6f2ea; --text:#26231f; --muted:#5e5a53; --faint:#8b867d; --rule:#e2dbcd; --link:#a5342b; --link-hover:#7d241d; --accent:#4f6b5f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1b1a18; --text:#ece6da; --muted:#b3ac9f; --faint:#857f74; --rule:#33302b; --link:#e2786d; --link-hover:#f2a198; --accent:#9dbcae; } }
+:root[data-theme="dark"] { --bg:#1b1a18; --text:#ece6da; --muted:#b3ac9f; --faint:#857f74; --rule:#33302b; --link:#e2786d; --link-hover:#f2a198; --accent:#9dbcae; }
+header { display: grid; grid-template-columns: 1fr 150px; gap: 28px; align-items: center; padding: 64px 0 28px; }
+.namerow { display: flex; align-items: center; gap: 14px; }
+h1 { font-size: 2.5rem; margin: 0; line-height: 1.1; }
+.seal { width: 40px; height: auto; }
+.role { color: var(--muted); margin: 6px 0 16px; }
+.photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+h2 { color: var(--accent); display: flex; align-items: center; gap: 12px; }
+h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+@media (max-width: 560px) { header { grid-template-columns: 1fr; padding-top: 40px; } .photo { width: 120px; height: 120px; order: -1; } h1 { font-size: 2rem; } }
+</style>
+</head>
+<body>
+
+<main>
+
+<header>
+  <div>
+    <div class="namerow"><h1>Anwen Huang</h1><img class="seal" src="img/seal.png" alt="Red seal reading Huang Anwen"></div>
+    <p class="role">Ph.D. student in Computer Science, UCLA</p>
+    <nav class="links">
+  <a id="email" href="#">anwen [at] cs.ucla.edu</a>
+  <a href="Anwen_Huang_CV.pdf">CV</a>
+  <a href="https://github.com/ahuang915">GitHub</a>
+  <a href="https://www.linkedin.com/in/anwenhuang">LinkedIn</a>
+  <a href="https://anwenhuang.substack.com">Substack</a></nav>
+  </div>
+  <img class="photo" src="img/headshot.jpg" alt="Anwen Huang">
+</header>
+<section class="bio">
+  <p>I'm a first-year Ph.D. student in Computer Science at UCLA, advised by Prof. Wei Wang in the Scalable Analytics Institute (ScAI). I work on machine learning for healthcare, with a focus on multimodal foundation models and large language models.</p>
+  <p>At UCLA, I'm currently building foundation models and agentic pipelines for cancer clinical decision support that combine CT imaging, pathology, genomics, and clinical notes. With Berkeley AI Research (BAIR), I study the patient-safety risks of AI clinical scribes using sparse autoencoders and LLM-as-judge evaluation. Before that, I built LLM pipelines for pathology report extraction and deep learning models for T-cell receptor binding at UCSF.</p>
+  <p>I received B.A. degrees in Computer Science and Statistics from UC Berkeley in 2026.</p>
+  <p>Feel free to reach out if you'd like to chat about research, potential collaborations, or anything else!</p></section>
+
+<section>
+  <h2>Publications</h2>
+  <ul class="list">
+    <li class="pub"><a class="thumb" href="https://arxiv.org/abs/2512.04118"><img src="img/pub-scribes.png" alt="Scatter plot of feedback encounters per user, safety versus non-safety feedback (Figure 3)" loading="lazy"></a><div><div class="title"><a href="https://arxiv.org/abs/2512.04118">Patient Safety Risks from AI Scribes: Signals from End-User Feedback</a></div>
+      <div class="meta">J. Dai, <span class="me">A. Huang</span>, C. Nasrallah, et al.</div>
+      <div class="meta"><span class="venue">Machine Learning for Health (ML4H) Findings</span>, 2025</div></div></li>
+    <li class="pub"><a class="thumb" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12286776/"><img src="img/pub-peptcr.jpg" alt="PepTCR-Net Bayesian feed-forward network from combined embeddings to peptide predictions (Figure 1C)" loading="lazy"></a><div><div class="title"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12286776/">PepTCR-Net: Prediction of Multi-Class Antigen Peptides by T-Cell Receptor Sequences with Deep Learning</a></div>
+      <div class="meta">P. Le, L. Ung, H. Yang, <span class="me">A. Huang</span>, et al.</div>
+      <div class="meta"><span class="venue">Briefings in Bioinformatics</span> 26(4), 2025</div><div class="credit">Figure: Le et al., 2025, CC BY 4.0</div></div></li>
+    <li class="pub"><span class="thumb"><img src="img/pub-nanets.png" alt="Workflow from the poster: data sources, LLM extraction with GPT-4o over 3 runs, comparison with reference data, and evaluation" loading="lazy"></span><div><div class="title">Evaluation of Large Language Model-Based Extraction of Neuroendocrine Neoplasm Variables from Pathology Reports</div>
+      <div class="meta">J. M. Francisco, <span class="me">A. Huang</span>, A. Paciorek, et al.</div>
+      <div class="meta">Poster, <span class="venue">NANETS Symposium</span>, 2026</div></div></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="exp"><div><span class="title">UCLA ScAI</span> <span class="meta">· Graduate Student Researcher</span></div><div class="date">2026 – now</div></div>
+  <div class="exp"><div><span class="title">UCSF</span> <span class="meta">· Staff Research Associate</span></div><div class="date">2026</div></div>
+  <div class="exp"><div><span class="title">Berkeley AI Research (BAIR)</span> <span class="meta">· Undergraduate Researcher, then Research Collaborator</span></div><div class="date">2025 – now</div></div>
+  <div class="exp"><div><span class="title">CareDx</span> <span class="meta">· Software Engineering Intern</span></div><div class="date">2025</div></div>
+  <div class="exp"><div><span class="title">UC Berkeley</span> <span class="meta">· Lead Teaching Assistant, Probability for Data Science</span></div><div class="date">2024 – 2025</div></div>
+  <div class="exp"><div><span class="title">UCSF Department of Medicine</span> <span class="meta">· Research Intern</span></div><div class="date">2023 – 2024</div></div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <ul class="list">
+    <li><div class="title"><a href="https://github.com/ahuang915/costscope">costscope</a></div>
+      <div class="meta">Estimates the cost and wall time of batched LLM jobs from a small sample of runs, with confidence intervals, before you spend the full budget.</div></li>
+    <li><div class="title"><a href="https://github.com/ahuang915/lecture-animator">lecture-animator</a></div>
+      <div class="meta">Turns a recorded lecture narration into an animated lecture video using Manim and LLMs, running locally in Docker.</div></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Writing</h2>
+  <p class="artnote">In my free time, I like to jot down my thoughts on topics that interest me or problems I've encountered. You can read more below or on my <a href="https://anwenhuang.substack.com">Substack</a>.</p>
+  <ul class="list">
+    <li><div class="title"><a href="https://anwenhuang.substack.com/p/edits-are-everywhere">Edits are Everywhere</a></div><div class="meta">Version histories record what changed. I tried using a language model to recover why.</div><div class="date">Sep 2026</div></li>
+    <li><div class="title"><a href="https://anwenhuang.substack.com/p/the-cash-behind-the-cache">The Cash Behind the Cache</a></div><div class="meta">Investigating the cost mechanisms of LLM API caches.</div><div class="date">Jun 2026</div></li>
+    <li><div class="title"><a href="https://anwenhuang.substack.com/p/i-spent-2500-instead-of-250-so-i">I Spent $2,500 Instead of $250. So I Built This.</a></div><div class="meta">Introducing costscope, a tool for real-time API cost monitoring.</div><div class="date">Jun 2026</div></li>
+    <li><div class="title"><a href="https://anwenhuang.substack.com/p/the-cost-of-reasoning">The Cost of Reasoning</a></div><div class="meta">Reflections from working with unpredictable and costly reasoning models.</div><div class="date">Apr 2026</div></li>
+    <li><div class="title"><a href="https://anwenhuang.substack.com/p/the-ai-will-see-you-now-but-check">The AI Will See You Now (But Check Its Notes)</a></div><div class="meta">Investigating the nuances of ambient scribing in healthcare.</div><div class="date">Mar 2026</div></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Art</h2>
+  <p class="artnote">I'm also an avid artist! I've done Chinese brush painting, oil, and colored pencil since I was young, and art has given me an eye for small details and careful work.</p>
+  <div class="gallery">
+    <figure><img src="img/peony-red-gold.jpg" alt="Red peony with gold outlines, ink and color on paper" loading="lazy"><figcaption>Peony, ink, color and gold on paper, 2025</figcaption></figure>
+    <figure><img src="img/ducks-moon.jpg" alt="Ducks resting under a full moon among reeds" loading="lazy"><figcaption>Ducks under the moon, ink and color, 2018</figcaption></figure>
+    <figure><img src="img/autumn.jpg" alt="Autumn birch trees by a river with geese" loading="lazy"><figcaption>Autumn river, ink and color, 2019</figcaption></figure>
+    <figure><img src="img/coast-oil.jpg" alt="Cypress trees on a foggy coastal cliff" loading="lazy"><figcaption>Foggy coast, oil on canvas, 2019</figcaption></figure>
+    <figure><img src="img/magnolia.jpg" alt="White magnolia on an ink branch" loading="lazy"><figcaption>Magnolia, ink and color, 2020</figcaption></figure>
+    <figure><img src="img/dogwood.jpg" alt="Pink dogwood blossoms in colored pencil" loading="lazy"><figcaption>Dogwood, colored pencil</figcaption></figure>
+  </div>
+</section>
+
+<footer>Last updated November 2026 · Paintings and seal by Anwen Huang</footer>
+</main>
+<script>(function(){var u="anwen",d="cs.ucla.edu",a=document.getElementById("email");if(a){a.href="mailto:"+u+"@"+d;a.textContent=u+"@"+d;}})();</script>
+</body>
+</html>
