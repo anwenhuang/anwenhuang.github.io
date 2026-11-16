@@ -1,91 +1,117 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anwen Huang</title>
-<meta name="description" content="Anwen Huang is a Computer Science Ph.D. student at UCLA working on multimodal foundation models and LLMs for healthcare.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-<link rel="apple-touch-icon" href="img/favicon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<style>
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-main { max-width: 760px; margin: 0 auto; padding: 0 20px 72px; }
-a { color: var(--link); text-decoration: none; }
-a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
-h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
-h2 { font-size: 1.3rem; margin: 48px 0 14px; }
-.links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.95rem; }
-.bio p { margin: 0 0 14px; }
-ul.list { list-style: none; padding: 0; margin: 0; }
-ul.list li { margin: 0 0 18px; }
-.title { font-weight: 600; }
-.meta { color: var(--muted); font-size: 0.93rem; }
-.venue { font-style: italic; }
-.me { font-weight: 600; color: var(--text); }
-.date { color: var(--faint); font-size: 0.85rem; }
-.exp { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; margin: 0 0 12px; }
-.exp .date { text-align: right; white-space: nowrap; }
-.artnote { color: var(--muted); margin: 0 0 18px; }
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.gallery figure { margin: 0; }
-.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 4px; background: var(--rule); }
-.gallery figcaption { font-size: 0.8rem; color: var(--faint); margin-top: 6px; line-height: 1.4; }
-.pub { display: grid; grid-template-columns: 240px 1fr; gap: 18px; align-items: start; }
-.thumb { position: relative; display: block; }
-.thumb img { width: 100%; aspect-ratio: 16/10; object-fit: contain; background: #fff; border: 1px solid var(--rule); border-radius: 4px; display: block; }
-.thumb.video img { object-fit: cover; background: #000; }
-.thumb iframe { width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 4px; display: block; }
-.play { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgba(0,0,0,.6); }
-.play::after { content: ""; position: absolute; left: 17px; top: 13px; border-style: solid; border-width: 9px 0 9px 14px; border-color: transparent transparent transparent #fff; }
-.thumb.video:hover .play { background: var(--link); }
-.credit { color: var(--faint); font-size: 0.75rem; margin-top: 2px; }
-@media (max-width: 560px) { .pub { grid-template-columns: 1fr; } .thumb { max-width: 260px; } }
-footer { margin-top: 56px; color: var(--faint); font-size: 0.85rem; }
-@media (max-width: 560px) {
-  .exp { grid-template-columns: 1fr; } .exp .date { text-align: left; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-}
-:root { --bg:#f6f2ea; --text:#26231f; --muted:#5e5a53; --faint:#8b867d; --rule:#e2dbcd; --link:#a5342b; --link-hover:#7d241d; --accent:#4f6b5f; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1b1a18; --text:#ece6da; --muted:#b3ac9f; --faint:#857f74; --rule:#33302b; --link:#e2786d; --link-hover:#f2a198; --accent:#9dbcae; } }
-:root[data-theme="dark"] { --bg:#1b1a18; --text:#ece6da; --muted:#b3ac9f; --faint:#857f74; --rule:#33302b; --link:#e2786d; --link-hover:#f2a198; --accent:#9dbcae; }
-header { display: grid; grid-template-columns: 1fr 150px; gap: 28px; align-items: center; padding: 64px 0 28px; }
-.namerow { display: flex; align-items: center; gap: 14px; }
-h1 { font-size: 2.5rem; margin: 0; line-height: 1.1; }
-.seal { width: 40px; height: auto; }
-.role { color: var(--muted); margin: 6px 0 16px; }
-.photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
-h2 { color: var(--accent); display: flex; align-items: center; gap: 12px; }
-h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-@media (max-width: 560px) { header { grid-template-columns: 1fr; padding-top: 40px; } .photo { width: 120px; height: 120px; order: -1; } h1 { font-size: 2rem; } }
-</style>
-</head>
-<body>
-
-<main>
-
-<header>
-  <div>
-    <div class="namerow"><h1>Anwen Huang</h1><img class="seal" src="img/seal.png" alt="Red seal reading Huang Anwen"></div>
-    <p class="role">Ph.D. student in Computer Science, UCLA</p>
-    <nav class="links">
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Anwen Huang</title>
+  <meta name="description" content="Anwen Huang is a Computer Science Ph.D. student at UCLA working on foundation models, LLM agents, and AI for health.">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root { color-scheme: light; --ink:#1E2747; --link:#3B4B8F; --win:#FAFAFD; --bar:#3B4A80; --tab:#56638F; --panel:#FFFFFF; --btn:#56638F;
+    --muted: color-mix(in srgb, var(--ink) 72%, var(--win)); --faint: color-mix(in srgb, var(--ink) 52%, var(--win));
+    --rule: color-mix(in srgb, var(--ink) 16%, var(--win));
+    --head:'Instrument Serif', serif; --body:'Newsreader', Georgia, serif; --chrome:'Pixelify Sans', ui-monospace, monospace; }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; min-height:100vh; color:var(--ink); font: 17px/1.62 var(--body); background:#1E2747; padding: 40px 16px 60px; }
+  a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent); }
+  a:hover { text-decoration-color: var(--link); }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .tabs { display:flex; gap: 5px; padding-left: 20px; flex-wrap: wrap; }
+  .tabs a { font-family: var(--chrome); font-size: .92rem; color: var(--muted); text-decoration:none; padding: 7px 16px 6px; border: 1.5px solid var(--ink);
+    border-bottom: none; border-radius: 10px 10px 0 0; background: var(--tab); position: relative; top: 1.5px; color:#DCE0F2; }
+  .tabs a:hover { color: #EEF0FA; }
+  .tabs a[aria-selected="true"] { background: var(--bar); color: #EEF0FA; z-index: 2; padding-bottom: 7.5px; }
+  .window { background: var(--win); border: 1.5px solid var(--ink); border-radius: 14px; box-shadow: 5px 5px 0 #11182F; overflow: hidden; }
+  .titlebar { display:flex; align-items:center; gap: 7px; padding: 9px 14px; background: var(--bar); color:#EEF0FA; border-bottom: 1.5px solid var(--ink); font-family: var(--chrome); font-size: .95rem; }
+  .titlebar .d { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--ink); }
+  .titlebar .d:nth-child(1) { background:#D6CFF0; } .titlebar .d:nth-child(2) { background:#CFDBF2; } .titlebar .d:nth-child(3) { background:#A9B2DE; }
+  .titlebar .name { margin-left:auto; }
+  .addr { display:flex; align-items:center; gap: 12px; padding: 8px 14px; border-bottom: 1.5px solid var(--ink); font-family: var(--chrome); }
+  .addr .nav { letter-spacing: 6px; color: var(--faint); }
+  .addr .url { flex:1; border: 1.5px solid var(--ink); border-radius: 999px; padding: 3px 14px; background: var(--panel); font-size: .9rem; }
+  .content { padding: 32px 34px 28px; min-height: 520px; }
+  .hero { display:grid; grid-template-columns: 240px 1fr; gap: 32px; align-items:start; }
+  .card { text-align:center; }
+  .photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--ink); display:block; margin: 0 auto 10px; }
+  .seal { height: 0.62em; width: auto; vertical-align: 0.02em; margin-left: 4px; }
+  .btns { display:grid; gap: 8px; margin-top: 22px; }
+  .btns a { display:block; font-family: var(--chrome); font-size: .92rem; text-decoration:none; color: #EEF0FA; background: var(--btn); border: 1.5px solid var(--ink); border-radius: 999px; padding: 5px 14px;
+    box-shadow: 2px 2px 0 var(--ink); transition: transform .12s, box-shadow .12s, background-color .12s; }
+  .btns a:hover { transform: translate(1px,1px); box-shadow: 1px 1px 0 var(--ink); background: var(--bar); color: #EEF0FA; }
+  h1 { font-family: var(--head); font-weight: 400; font-size: 3.2rem; line-height: 1.05; margin: 2px 0 4px; }
+  .role { font-family: var(--chrome); color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
+  .bio p { margin: 0 0 12px; }
+  .pane h2 { font-family: var(--head); font-weight: 400; font-size: 2.1rem; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1.5px solid var(--rule); }
+  .pane + .pane { margin-top: 44px; }
+  .js .pane { display:none; } .js .pane.on { display:block; } .js .pane + .pane { margin-top: 0; }
+  ul.list { list-style:none; padding:0; margin:0; }
+  ul.list li { margin: 0 0 20px; }
+  .title { font-weight: 600; }
+  .meta { color: var(--muted); font-size: .95rem; }
+  .venue { font-style: italic; }
+  .me { font-weight: 700; color: var(--ink); }
+  .date { font-family: var(--chrome); color: var(--faint); font-size: .85rem; }
+  .credit { color: var(--faint); font-size: .75rem; }
+  .pub { display:grid; grid-template-columns: 210px 1fr; gap: 20px; align-items:start; }
+  .thumb img { width:100%; aspect-ratio:16/10; object-fit:contain; background:#fff; border: 1.5px solid var(--rule); border-radius: 8px; display:block; }
+  .exp { display:grid; grid-template-columns: 1fr auto; gap: 2px 16px; margin: 0 0 12px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+  .exp .date { white-space:nowrap; text-align:right; }
+  .artnote { color: var(--muted); margin: 0 0 18px; }
+  .gallery { display:grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+  .gallery figure { margin:0; background: var(--panel); border: 1.5px solid var(--rule); border-radius: 10px; padding: 8px 8px 6px; }
+  .gallery img { width:100%; aspect-ratio:1; object-fit:cover; display:block; border-radius: 6px; }
+  .gallery figcaption { font-size: .78rem; color: var(--faint); margin-top: 6px; line-height: 1.35; }
+  .statusbar { display:flex; justify-content: space-between; gap: 10px; border-top: 1.5px solid var(--ink); background: var(--bar); padding: 7px 14px; font-family: var(--chrome); font-size: .82rem; color: #EEF0FA; opacity:.95; }
+  .statusbar img { width: 16px; vertical-align: -3px; margin-right: 6px; }
+  @media (max-width: 680px) {
+    body { padding: 18px 10px 40px; } .content { padding: 22px 16px 18px; }
+    .hero { grid-template-columns: 1fr; } .photo { width: 160px; height: 160px; }
+    .btns { grid-template-columns: 1fr 1fr; }
+    .pub { grid-template-columns: 1fr; } .thumb { max-width: 260px; }
+    .exp { grid-template-columns: 1fr; } .exp .date { text-align:left; }
+    .gallery { grid-template-columns: repeat(2,1fr); }
+    .tabs { padding-left: 6px; gap: 3px; } .tabs a { padding: 5px 9px 4px; font-size: .8rem; }
+    .addr .nav { display:none; } h1 { font-size: 2.5rem; }
+  }
+  </style>
+  </head>
+  <body>
+  <div class="wrap">
+    <nav class="tabs" aria-label="Sections">
+      <a href="#home" aria-selected="true">home</a><a href="#papers">papers</a><a href="#experience">experience</a><a href="#projects">projects</a><a href="#writing">writing</a><a href="#art">art</a>
+    </nav>
+    <div class="window">
+      <div class="titlebar"><span class="d" aria-hidden="true"></span><span class="d" aria-hidden="true"></span><span class="d" aria-hidden="true"></span><span class="name">anwen.huang ~ home</span></div>
+      <div class="addr" aria-hidden="true"><span class="nav">&larr;&rarr;&#8635;</span><span class="url">anwenhuang.github.io</span></div>
+      <main class="content">
+        <section class="pane on" id="home">
+        <div class="hero">
+          <div class="card">
+            <img class="photo" src="img/headshot.jpg" alt="Anwen Huang">
+              <nav class="btns">
   <a id="email" href="#">anwen [at] cs.ucla.edu</a>
   <a href="https://github.com/anwenhuang">GitHub</a>
   <a href="https://www.linkedin.com/in/anwenhuang">LinkedIn</a>
   <a href="https://anwenhuang.substack.com">Substack</a></nav>
-  </div>
-  <img class="photo" src="img/headshot.jpg" alt="Anwen Huang">
-</header>
-<section class="bio">
+          </div>
+          <div>
+            <h1>Hi, I'm Anwen! <img class="seal" src="img/seal.png" alt="Red seal reading Huang Anwen"></h1>
+            <p class="role">Ph.D. student in Computer Science @ UCLA</p>
+            <div class="bio">
   <p>I'm a first-year Ph.D. student in Computer Science at UCLA, advised by <a href="https://web.cs.ucla.edu/~weiwang/">Prof. Wei Wang</a> in the <a href="https://scai.cs.ucla.edu/">Scalable Analytics Institute (ScAI)</a>. I work on AI for healthcare, with a focus on multimodal foundation models and large language models.</p>
   <p>I got my start in research at UCSF, building deep learning models for T-cell receptor binding and, later, LLM pipelines for pathology report extraction. With <a href="https://irenechen.net/">Prof. Irene Chen</a>'s lab at <a href="https://bair.berkeley.edu/">Berkeley AI Research (BAIR)</a>, I study the patient-safety risks of AI clinical scribes using sparse autoencoders and LLM-as-judge evaluation. Now at UCLA, I'm building foundation models and agentic pipelines for cancer clinical decision support that combine CT imaging, pathology, genomics, and clinical notes.</p>
   <p>I received B.A. degrees in Computer Science and Statistics from UC Berkeley in 2026.</p>
-  <p>Feel free to reach out if you'd like to chat about research, potential collaborations, or anything else!</p></section>
-
-<section>
+  <p>Feel free to reach out if you'd like to chat about research, potential collaborations, or anything else!</p></div>
+          </div>
+        </div>
+        </section>
+  
+<section class="pane" id="papers">
   <h2>Publications</h2>
   <ul class="list">
     <li class="pub"><a class="thumb" href="https://arxiv.org/abs/2512.04118"><img src="img/pub-scribes.png" alt="Scatter plot of feedback encounters per user, safety versus non-safety feedback (Figure 3)" loading="lazy"></a><div><div class="title"><a href="https://arxiv.org/abs/2512.04118">Patient Safety Risks from AI Scribes: Signals from End-User Feedback</a></div>
@@ -100,7 +126,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   </ul>
 </section>
 
-<section>
+<section class="pane" id="experience">
   <h2>Experience</h2>
   <div class="exp"><div><span class="title"><a href="https://scai.cs.ucla.edu/">UCLA ScAI</a></span> <span class="meta">· Graduate Student Researcher</span></div><div class="date">2026 – now</div></div>
   <div class="exp"><div><span class="title">UCSF</span> <span class="meta">· Staff Research Associate</span></div><div class="date">2026</div></div>
@@ -110,7 +136,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   <div class="exp"><div><span class="title">UCSF Department of Medicine</span> <span class="meta">· Research Intern</span></div><div class="date">2023 – 2024</div></div>
 </section>
 
-<section>
+<section class="pane" id="projects">
   <h2>Projects</h2>
   <ul class="list">
     <li><div class="title"><a href="https://github.com/anwenhuang/costscope">costscope</a></div>
@@ -120,7 +146,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   </ul>
 </section>
 
-<section>
+<section class="pane" id="writing">
   <h2>Writing</h2>
   <p class="artnote">In my free time, I like to jot down my thoughts on topics that interest me or problems I've encountered. You can read more below or on my <a href="https://anwenhuang.substack.com">Substack</a>.</p>
   <ul class="list">
@@ -132,7 +158,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   </ul>
 </section>
 
-<section>
+<section class="pane" id="art">
   <h2>Art</h2>
   <p class="artnote">I'm also an avid artist! I've done Chinese brush painting, oil, and colored pencil since I was young, and art has given me an eye for small details and careful work.</p>
   <div class="gallery">
@@ -145,8 +171,28 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   </div>
 </section>
 
-<footer>Last updated November 2026 · Paintings and seal by Anwen Huang</footer>
-</main>
-<script>(function(){var u="anwen",d="cs.ucla.edu",a=document.getElementById("email");if(a){a.href="mailto:"+u+"@"+d;a.textContent=u+"@"+d;}})();</script>
-</body>
-</html>
+      </main>
+      <div class="statusbar"><span><img src="img/seal.png" alt="">paintings &amp; seal by Anwen Huang</span><span>last updated nov 2026</span></div>
+    </div>
+  </div>
+  <script>(function(){var u="anwen",d="cs.ucla.edu",a=document.getElementById("email");if(a){a.href="mailto:"+u+"@"+d;a.textContent=u+"@"+d;}})();</script>
+  <script>
+  (function(){
+    var ids=["home","papers","experience","projects","writing","art"];
+    document.documentElement.classList.add("js");
+    function show(id){
+      if(ids.indexOf(id)<0) id="home";
+      ids.forEach(function(x){
+        var p=document.getElementById(x); if(p) p.classList.toggle("on", x===id);
+        var t=document.querySelector('.tabs a[href="#'+x+'"]'); if(t) t.setAttribute("aria-selected", x===id ? "true" : "false");
+      });
+      document.querySelector(".titlebar .name").textContent="anwen.huang ~ "+id;
+      document.querySelector(".addr .url").textContent="anwenhuang.github.io"+(id==="home"?"":"/#"+id);
+    }
+    window.addEventListener("hashchange",function(){ show(location.hash.slice(1)); window.scrollTo(0,0); });
+    show(location.hash.slice(1));
+  })();
+  </script>
+  </body>
+  </html>
+  

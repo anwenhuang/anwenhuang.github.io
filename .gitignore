@@ -1,3 +1,9 @@
 mockup-*.html
 build_mockups.py
 .DS_Store
+v2-*.html
+build_v2.py
+retro-*.html
+build_retro.py
+retro2-*.html
+build_retro2.py
